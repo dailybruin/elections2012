@@ -1,0 +1,146 @@
+{% extends "elections12/base.html" %}
+
+{% block styles %}<link href="/static/updatedcss.css" rel="stylesheet">{% endblock %}
+{% block scripts %}
+		<!-- load charts -->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="/static/bl/js/ticker.js"></script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=269701246422391";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}
+
+{% block middleBody %}
+		<div class="container"> 
+			<div class="row" id="electionExplainer">
+				<div class="span8 electionExplainerText">
+					<div class="alert alert-info">
+						<strong>Election day is today.</strong><br />Westwood polls have closed. Follow our coverage here.
+					</div>
+				</div><!-- end div.electionExplainerText -->
+				<div class="span4 socialMedia">
+					<div class="fb_twitter">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-text="Follow 2012 Daily Bruin election coverage at" data-via="dailybruin" data-size="large" data-related="dailybruin">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						
+						<div class="fb-like" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true" data-action="recommend"></div>
+					</div><!-- end div.fb_twitter -->
+					
+				</div><!-- end div.socialMedia -->
+			</div><!-- end div#electionExplainer -->
+			<div class="row">
+				<div class="span12" id="inner">
+					<div class="row">
+						<div class="span8">
+								<p><strong>Want more info about the candidates and measures?</strong> Read the Daily Bruin's descriptions of the <a href="http://www.dailybruin.com/article/2012/11/elections-2012">measures</a> and <a href="http://www.dailybruin.com/article/2012/11/elections-2012-democrats-vs-republicans">candidates</a> that appeared on the Los Angeles County ballot. </p>
+
+							<div class="well nopad"><a href="http://elections.dailybruin.com/allstats/"><h2>Elections Statistics</h2></a>
+								<p>The Daily Bruin collaborated with the UCLA Department of Statistics to gauge the political climate on campus during the 2012 election season.</p>
+								<p>An anonymous online survey was emailed to 8,000 undergraduates through the UCLA Registrar&rsquo;s Office, which students could fill out between Sept. 24 and Oct. 9. The survey received 718 responses &mdash; a 9 percent response rate. While low, the responses matched UCLA student demographics and are an accurate indicator of the campus. The margin of error for the survey overall is 4.1 percent.</p>
+								<p>Students in the UCLA statistics course 140SL, which is about statistical consulting, analyzed the responses to the survey.</p>
+								<p><a href="https://www.google.com/fusiontables/DataSource?docid=1IDhBGtghJrfxHmgHyy6BI9f6CwTZxt3oZTTf7fw">Browse the raw data online</a> or <a href="/static/surveyquestions.pdf">download the complete list of questions asked</a>.</p>
+							</div>
+
+							<div class="stats">
+									<a href="http://www.dailybruin.com/article/2012/11/survey-shows-students-lack-political-involvement-on-campus"><img src="/static/apathy160.jpg" alt="political involvement on campus"/><p class="promo_head">Survey shows students lack political involvement on campus</p></a>
+									<p class="byline">By Nicole Chiang</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div>
+							<div class="stats">
+									<a href="http://www.dailybruin.com/article/2012/11/survey-finds-ulatino-students-more-likely-to-support-obama"><img src="/static/latino160.jpg" alt="Latino students support Obama"/><p class="promo_head">Survey finds Latino students more likely to support Obama</p></a>
+									<p class="byline">By Kristen Taketa</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div>
+							<div class="stats">
+									<a href="http://www.dailybruin.com/article/2012/10/5090d7c127bfd"><img src="/static/gender160.jpg" alt="gender gap in Obama support"/><p class="promo_head">Poll finds gender gap in Obama support <br/><br/></p></a>
+									<p class="byline">By Kylie Reynolds</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div>
+				
+							<div class="stats">
+									<a href="http://www.dailybruin.com/article/2012/10/poll-finds-prop-30-awareness-low-among-ucla-students"><img src="/static/prop30x160.jpg" alt="low Prop. 30 awareness"/><p class="promo_head">Poll finds Prop. 30 awareness low among UCLA students</p></a>
+									<p class="byline">By Andra Lim &amp; Sonali Kohli</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div>
+
+							<a href="http://elections.dailybruin.com/allstats/"><button class="btn btn-large btn-info white">
+								Explore the full set of survey data and the Daily Bruin's analysis of Proposition 30, <br/> Gov. Jerry Brown's tax initiative
+							</button></a>
+						</div> <!-- end of span8 -->
+
+						<div class="span4">
+
+							<!-- <div class="alert alert-error" id="checkback"> Check back here all day on Election Day, Nov. 6, to see <b>live exit poll results</b> from voters around UCLA and Westwood. 
+							</div> -->
+							<h3>Live exit poll results</h3>
+							<p>Daily Bruin reporters are at Westwood voting locations all day collecting exit poll results. The charts below are updated live as we collect responses. <a href="/exitpolls">View more exit poll results &raquo;</a></p>
+							<h5>President</h5>
+							<div id="presVisualization" style="width:300px;height:300px;"></div>
+								
+							<h5>Prop 30</h5>
+							<div id="propVisualization" style="width:300px;height:300px;"></div>
+							
+							<a href="http://www.lavote.net/LOCATOR/Default.cfm" target="_blank" rel="nofollow"><button class="btn btn-large info_buttons">Where do I go on Election Day? Find my closest polling place.</button></a>
+							
+							<a href="http://voterguide.sos.ca.gov/" target="_blank" rel="nofollow"><button class="btn btn-large btn-primary info_buttons white">What's on the ballot? Browse the Official Voter Information Guide.</button></a>
+							
+						</div> <!-- end of span4 column -->
+					</div> <!-- inside row -->
+					<hr />
+					<div class="row">
+						<div class="span8 offset2">
+							<iframe width="300" height="200" src="http://www.youtube.com/embed/a25ecG3uFqw" frameborder="0" allowfullscreen style="float:right"></iframe>
+							<h3>Google Hangout: The 2012 California ballot</h3>
+							<p>UCLA professor emeritus Daniel Mitchell joined news editor Naheed Rajwani for a live Google Hangout at 12:30 p.m. on Oct. 30. With the 2012 election one week away, Mitchell and Rajwani talked California politics, ballot measures and overall election issues. Watch the discussion:</p>
+							
+						</div><!-- end div.span12 -->
+					</div><!-- end div.row -->
+					<hr />
+					<div class="row">
+						<div class="span4">
+							<h3>UCLA Phone bankers in 2012 Elections</h3>
+							<iframe width="300" height="200" src="http://www.youtube.com/embed/i0rfN80qkkQ" frameborder="0" allowfullscreen></iframe>
+						</div><!-- end div.span4 -->
+						<div class="span4">
+							<h3 style="padding-top:26px;">Lambda Chi Alpha polling place</h3>
+							<iframe width="300" height="200" src="http://www.youtube.com/embed/ruiYuXZ76YI" frameborder="0" allowfullscreen></iframe>
+						</div><!-- end div.span4 -->
+						<div class="span4" style="margin-top:47px;">
+							<a href="http://mojo.dailybruin.com/"><img src="http://mojo.dailybruin.com/wp-content/themes/mojo/img/logo.png" style="display:block;margin-left:auto;margin-right:auto;text-align:center;"/></a>
+							<p style="text-align:center;">Read more live elections stories from around Westwood on the Daily Bruin's mobile journalism blog, <a href="http://mojo.dailybruin.com">Mojo</a>.</p>
+							<ul>
+								<li><a href="http://mojo.dailybruin.com/live-blog-ucla-community-reacts-to-election-2012-results/">Live Blog: UCLA Community Reacts to Election 2012 Results</a></li>
+							</ul>
+						</div><!-- end div.span4 -->
+					</div><!-- end div.row -->
+					<hr />
+					<h1>More elections stories</h1>
+					<div class="row">
+						<div class="span6">
+							<p class="section_head">NEWS</p>
+							<ul>
+								{% for news_story in news_stories %}
+								<li><a href="{{ news_story.dblink }}">{{ news_story.headline }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="span6">
+							<p class="section_head">OPINION</p>
+							<ul>
+								{% for opinion_story in opinion_stories %}
+								<li><a href="{{ opinion_story.dblink }}">{{ opinion_story.headline }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div><!-- end of second row-->
+
+				</div> <!-- this is the end of span12 inner, all of the body content -->
+			</div> 
+		</div> <!-- this is the end of div container -->
+
+{% endblock %}

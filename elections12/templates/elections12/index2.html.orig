@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Election Day is Tuesday &ndash; but knowing which way to vote can get confusing. The Daily Bruin has broken down the key information for the measures and candidates appearing on the Los Angeles County ballot so UCLA students can make informed decisions at the ballot box.">
+		<meta name="keywords" content="elections 2012, Barack Obama, Mitt Romney, Proposition 30, Proposition 37, presidential campaign, 2012 race, UCLA, voting">
+
+		<title>Elections 2012 | Daily Bruin</title>
+
+		<link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css"> -->
+    	<link href="/static/updatedcss.css" rel="stylesheet">
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+		<!-- load charts -->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="/static/bl/js/ticker.js"></script>
+
+	</head>
+
+	<body>
+		<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+		<div id="banner-back">
+			<a href="http://elections.dailybruin.com/">
+			<div class="container" id="banner-container">
+				<p>from the UCLA Daily Bruin</p>
+			</div></a>
+		</div>
+
+		<div class="container"> 
+			<div class="row">
+				<div class="span12" id="inner">
+					<div class="row">
+						<div class="span8">
+							<div class="explainer">
+								<p>Election Day is this Tuesday – but knowing which way to vote can get confusing. The Daily Bruin has broken down the key information for <b>the measures and candidates appearing on the Los Angeles County ballot</b>, so UCLA students can make informed decisions at the ballot box. </p>
+							</div>
+
+							<div class="well nopad"><a href="http://elections.dailybruin.com/allstats/"><h2>Elections Statistics</h2></a>
+								<p>The Daily Bruin collaborated with the UCLA Department of Statistics to gauge the political climate on campus during the 2012 election season.</p>
+								<p>An anonymous online survey was emailed to 8,000 undergraduates through the UCLA Registrar&rsquo;s Office, which students could fill out between Sept. 24 and Oct. 9. The survey received 718 responses &mdash; a 9 percent response rate. While low, the responses matched UCLA student demographics and are an accurate indicator of the campus. The margin of error for the survey overall is 4.1 percent.</p>
+								<p>Students in the UCLA statistics course 140SL, which is about statistical consulting, analyzed the responses to the survey.</p>
+								<p><a href="https://www.google.com/fusiontables/DataSource?docid=1IDhBGtghJrfxHmgHyy6BI9f6CwTZxt3oZTTf7fw">Browse the raw data online</a> or <a href="/static/surveyquestions.pdf">download the complete list of questions asked</a>.</p>
+							</div>
+
+							<div class="stats">
+									<a href="http://www.dailybruin.com/article/2012/11/survey-shows-students-lack-political-involvement-on-campus"><img src="/static/apathy160.jpg" alt="political involvement on campus"/><p class="promo_head">Survey shows students lack political involvement on campus</p></a>
+									<p class="byline">By Nicole Chiang</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div>
+							<div class="stats">
+									<a href="http://www.dailybruin.com/article/2012/11/survey-finds-ulatino-students-more-likely-to-support-obama"><img src="/static/latino160.jpg" alt="Latino students support Obama"/><p class="promo_head">Survey finds Latino students more likely to support Obama</p></a>
+									<p class="byline">By Kristen Taketa</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div>
+							<div class="stats">
+									<a href="http://www.dailybruin.com/article/2012/10/5090d7c127bfd"><img src="/static/gender160.jpg" alt="gender gap in Obama support"/><p class="promo_head">Poll finds gender gap in Obama support <br/><br/></p></a>
+									<p class="byline">By Kylie Reynolds</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div>
+				
+							<div class="stats">
+									<a href="http://www.dailybruin.com/article/2012/10/poll-finds-prop-30-awareness-low-among-ucla-students"><img src="/static/prop30x160.jpg" alt="low Prop. 30 awareness"/><p class="promo_head">Poll finds Prop. 30 awareness low among UCLA students</p></a>
+									<p class="byline">By Andra Lim &amp; Sonali Kohli</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div>
+
+							<a href="http://elections.dailybruin.com/allstats/"><button class="btn btn-large btn-info white">
+								Explore the full set of survey data and the Daily Bruin's analysis of Proposition 30, <br/> Gov. Jerry Brown's tax initiative
+							</button></a>
+						</div> <!-- end of span8 -->
+
+						<div class="span4">
+							<div class="fb_twitter">
+
+								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://elections.dailybruin.com/" data-text="Everything you wanted to know about this year's presidential race, propositions and more" data-via="dailybruin" data-hashtags="dbelection12">Tweet</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+								<div class="fb-like" data-href="http://elections.dailybruin.com/" data-send="false" data-layout="button_count" data-width="350" data-show-faces="true"></div>
+							</div>
+
+							<!-- <div class="alert alert-error" id="checkback"> Check back here all day on Election Day, Nov. 6, to see <b>live exit poll results</b> from voters around UCLA and Westwood. 
+							</div> -->
+							<h4>Live exit poll results</h4>
+							<em>The Daily Bruin polled undergraduate voters in Westwood as they exited the polls. The results below will be constantly updated until the polls close at 8 p.m.</em>
+							<h5>President</h5>
+							<div id="presVisualization" style="width:300px;height:300px;"></div>
+								
+							<h6>Prop 30</h6>
+							<div id="propVisualization" style="width:300px;height:300px;"></div>
+							
+							<a href="http://www.lavote.net/LOCATOR/Default.cfm" target="_blank" rel="nofollow"><button class="btn btn-large info_buttons">Where do I go on Election Day? Find my closest polling place.</button></a>
+							
+							<a href="http://voterguide.sos.ca.gov/" target="_blank" rel="nofollow"><button class="btn btn-large btn-primary info_buttons white">What's on the ballot? Browse the Official Voter Information Guide.</button></a>
+
+							<!--
+
+							<div class="props">
+								<a href=""><img src="props2.jpg" alt="propositions and candidates"/>Read about the candidates and propositions</a>
+								<br style="width:100%;display:block;clear:both" />
+							</div>
+
+							<div class="endorse">
+								<a href=""><img src="checkmark.jpg" alt="endorsements"/>Check out the Daily Bruin endorsements</a>
+								<br style="width:100%;display:block;clear:both" />
+							</div>
+
+
+							-->
+							
+							<div class="ghangout">
+								<a href="http://www.dailybruin.com/article/2012/10/live-google-plus-hangout-the-2012-california-ballot">Live Google Plus Hangout: The 2012 California ballot</a> <p>Video with UCLA professor emeritus Daniel Mitchell and Daily Bruin news editor Naheed Rajwani</p>
+								<iframe width="280" height="158" src="http://www.youtube.com/embed/a25ecG3uFqw" frameborder="0" allowfullscreen></iframe>
+								<br style="width:100%;display:block;clear:both" />
+							</div>
+
+						</div> <!-- end of span4 column -->
+					</div> <!-- inside row -->
+					<hr/>
+					<h1>All Elections 2012 content</h1>
+					<div class="row">
+						<div class="span6">
+							<p class="section_head">NEWS</p>
+							<ul>
+								{% for news_story in news_stories %}
+								<li><a href="{{ news_story.dblink }}">{{ news_story.headline }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="span6">
+							<p class="section_head">OPINION</p>
+							<ul>
+								{% for opinion_story in opinion_stories %}
+								<li><a href="{{ opinion_story.dblink }}">{{ opinion_story.headline }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div><!-- end of second row-->
+
+				</div> <!-- this is the end of span12 inner, all of the body content -->
+			</div> 
+		</div> <!-- this is the end of div container -->
+
+		<footer>
+			<p id="footer-nav"><a class="coloredlink" href="http://elections.dailybruin.com/">Elections 2012</a>  |  <a href="http://dailybruin.com/">Home</a>  |  <a href="http://dailybruin.com/news">News</a>  |  <a href="http://dailybruin.com/sports">Sports</a>  |  <a href="http://dailybruin.com/ae">A&amp;E</a>  |  <a href="http://dailybruin.com/opinion">Opinion</a></p>
+			<p id="footer-copy">Page by Kelly Zhou and Byron Lutz, Bruin senior staff. Content &copy; 2012 the Daily Bruin</p>
+		</footer>
+
+	</body>
+
+</html>

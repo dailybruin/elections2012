@@ -1,0 +1,67 @@
+{% extends "elections12/base.html" %}
+{% block title %}Elections 2012 Statistics{% endblock %}
+{% block styles %}{% endblock %}
+{% block scripts %}
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script src="/static/bl/js/charts.js"></script>
+{% endblock %}
+{% block middleBody %}
+		<!-- <div class="alert alert-info">
+			Check back here all day on election day, Nov. 6, to see <strong>live exit poll results</strong> from Westwood voters.
+		</div>	 -->
+		<article>
+			<h2>Elections Statistics</h2>
+			<p>The Daily Bruin collaborated with the UCLA Department of Statistics to gauge the political climate on campus during the 2012 election season.</p>
+			<p>An anonymous online survey was emailed to 8,000 undergraduates through the UCLA Registrar&rsquo;s Office, which students could fill out between Sept. 24 and Oct. 9. The survey received 718 responses &mdash; a 9 percent response rate. While low, the responses matched UCLA student demographics and are an accurate indicator of the campus. The margin of error for the survey overall is 4.1 percent.</p>
+			<p>Students in the UCLA statistics course 140SL, which is about statistical consulting, analyzed the responses to the survey.</p>
+			<p><a href="https://www.google.com/fusiontables/DataSource?docid=1IDhBGtghJrfxHmgHyy6BI9f6CwTZxt3oZTTf7fw">Browse the raw data online</a> or <a href="/static/surveyquestions.pdf">download the complete list of questions asked</a>.</p>
+		</article>
+		
+		<article>
+			<h2>Prop 30</h2>
+			<a href="/stats"><img src="/static/bl/img/prop30.jpg" class="img-polaroid" id="prop30img" /></a>
+			<p class="prop30desc">California Proposition 30 has a direct impact on California&rsquo;s school systems. Learn about the proposition and how UCLA students feel in <a href="/stats">What&rsquo;s the Deal with Proposition 30</a>.</p>
+			<br style="width:100%;clear:both;display:block" />
+		</article>
+		
+		<article>
+			<h2>Financial Aid</h2>
+			<p>How are students on financial aid voting differently from those not on financial aid? We take a look at what percent of students with financial aid support certain candidates and policies, versus what percent of students with no financial aid support them. Explore the charts below.</p>
+			<div id="chartcontrol">
+				<ul>
+					<li><a class="chart1 selected" href="#" >Who will you vote for in 2012?</a></li>
+					<li><a class="chart2" href="#">Do you support Obama's policies?</a></li>
+					<li><a class="chart3" href="#">What issues are important to you in the upcoming election?</a></li>
+					<li><a class="chart4" href="#">What will you vote on Prop 30? What will you vote?</a></li>
+					<li><a class="chart5" href="#">Of those familiar with Prop 30, what will you vote on it?</a></li>
+				</ul>
+			</div>
+			<div id="chart_div">
+			
+			</div>
+		</article>
+		
+		<article>
+			<p><strong>Why don't the numbers add up?</strong></p>
+			<p>The numbers in the graphs on this site may not add up exactly to 100 percent. This is a result of the rounding (and decimal truncation) on our numbers. The calculations, however, are still accurate; most of the percentages are calculated every time you load the page. Please <a href="mailto:online@media.ucla.edu">send us an email</a> if you still have concerns about the accuracy of our data or calculations.</p>
+		</article>
+		
+		<article>
+			<h2>Comments</h2>
+			        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'thedailybruin';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+		</article>
+
+{% endblock %}

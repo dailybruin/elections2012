@@ -1,0 +1,293 @@
+{% extends "elections12/base.html" %}
+
+{% block styles %}<link href="/static/updatedcss.css" rel="stylesheet">{% endblock %}
+{% block scripts %}
+		<!-- load charts -->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="/static/bl/js/ticker.js"></script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=269701246422391";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}
+
+{% block middleBody %}
+		<div class="container"> 
+			<div class="row" id="electionResults">
+				<div class="span8">
+					<h1 class="resultsTitle">Election results</h1>
+					<div class="row">
+						<div class="span4 results" id="candidateResults">
+							<h3>Candidates</h3>
+							<div id="presidentResult">
+								<img src="/static/candidates/bobama.jpg" />
+								<span class="candidateTitle democrat">President</span>
+								<span class="candidateName">Barack Obama</span>
+								<span class="candidateParty">Democrat<br /><a href="http://www.dailybruin.com/article/2012/11/battleground-states-help-secure-obama-re-election">Read more &raquo;</a></span>
+								<br style="width:100%;clear:both;display:block" />
+							</div><!-- end div#presidentResult -->
+							<hr />
+							<ul>
+								<li>
+									<img src="/static/candidates/jbiden.jpg" />
+									<span class="candidateTitle democrat">Vice President</span>
+									<span class="candidateName">Joseph Biden</span>
+									<span class="candidateParty">Democrat</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<img src="/static/candidates/dfeinstein.jpg" />
+									<span class="candidateTitle democrat">Senator</span>
+									<span class="candidateName">Dianne Feinstein</span>
+									<span class="candidateParty">Democrat</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<img src="/static/candidates/hwaxman.jpg" />
+									<span class="candidateTitle democrat">Representative</span>
+									<span class="candidateName">Henry Waxman</span>
+									<span class="candidateParty">Democrat, 33rd District</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<img src="/static/candidates/hmitchell.jpg" />
+									<span class="candidateTitle democrat">Assembly</span>
+									<span class="candidateName">Holly Mitchell</span>
+									<span class="candidateParty">Democrat, 54th District</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<img src="/static/candidates/jlacey.jpg" />
+									<span class="candidateTitle">District attorney</span>
+									<span class="candidateName">Jackie Lacey</span>
+									<span class="candidateParty">LA County</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+							</ul>
+						</div><!-- end div#candidateResults -->
+						<div class="span4 results" id="propResults">
+							<h3>Measures</h3>
+							<div id="propThirtyResult">
+								<div class="propBubble propYes">30</div>
+								<span class="propResult propYes">Passed</span>
+								<span class="propName">Jerry Brown's Tax Measure<br /><a href="http://www.dailybruin.com/blog/timestamp/2012/11/proposition-30-approved-by-california-voters">Read more &raquo;</a></span>
+								<br style="width:100%;clear:both;display:block" />
+							</div><!-- end div#propThirtyResult -->
+							<hr />
+							<ul>
+								<li>
+									<div class="propBubble propNo"><span class="propNum">31</span></div>
+									<span class="propResult propNo">Failed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propNo"><span class="propNum">32</span></div>
+									<span class="propResult propNo">Failed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propNo"><span class="propNum">33</span></div>
+									<span class="propResult propNo">Failed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propNo"><span class="propNum">34</span></div>
+									<span class="propResult propNo">Failed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propYes"><span class="propNum">35</span></div>
+									<span class="propResult propYes">Passed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propYes"><span class="propNum">36</span></div>
+									<span class="propResult propYes">Passed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propNo"><span class="propNum">37</span></div>
+									<span class="propResult propNo">Failed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propNo"><span class="propNum">38</span></div>
+									<span class="propResult propNo">Failed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propYes"><span class="propNum">39</span></div>
+									<span class="propResult propYes">Passed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propYes"><span class="propNum">40</span></div>
+									<span class="propResult propYes">Passed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+							</ul>
+							<br style="clear:both;width:100%;display:block" />
+							<hr />
+							<ul>
+								<li>
+									<div class="propBubble propNo"><span class="propLetter">A</span></div>
+									<span class="propResult propNo">Failed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propYes"><span class="propLetter">B</span></div>
+									<span class="propResult propYes">Passed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+								<li>
+									<div class="propBubble propYes">J</div>
+									<span class="propResult propYes">Passed</span>
+									<br style="width:100%;clear:both;display:block" />
+								</li>
+							</ul>
+							<br style="clear:both;width:100%;display:block" />
+							<hr />
+							<p style="display:block;clear:both;font-style:italic">This page was updated as the official results of the Nov. 6 general election were tallied. Explore the rest of the site for a comprehensive look at the 2012 election through stories, photos, videos, blog posts and interactive multimedia content, produced by Daily Bruin staff.</p>
+						</div><!-- end div#propResults -->
+					</div><!-- end div.row -->
+				</div><!-- end div.span8 -->
+				<div class="span4">
+					<div class="fb_twitter">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-text="Follow 2012 Daily Bruin election coverage at" data-via="dailybruin" data-size="large" data-related="dailybruin">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						
+						<div class="fb-like" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true" data-action="recommend"></div>
+					</div><!-- end div.fb_twitter -->
+					
+					<blockquote class="twitter-tweet"><p>Barack Obama is a public figure on par with Kennedy and an orator on par with Reagan. <a href="https://twitter.com/search/%23dbelections12">#dbelections12</a></p>&mdash; Eitan Arom (@Eitan_Arom) <a href="https://twitter.com/Eitan_Arom/status/266072767064055808" data-datetime="2012-11-07T07:01:05+00:00">November 7, 2012</a></blockquote>
+					<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					
+					<blockquote class="twitter-tweet"><p>Obama very fair to Romney family on legacy of public service--a generous comment that he can certainly afford to make.</p>&mdash; Alexandra Tashman (@alexandra_tash) <a href="https://twitter.com/alexandra_tash/status/266068046970486784" data-datetime="2012-11-07T06:42:20+00:00">November 7, 2012</a></blockquote>
+					<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					
+					<blockquote class="twitter-tweet"><p>Romney gracious in defeat, remarking that “I pray that the president will be successful in guiding our nation.”</p>&mdash; Alexandra Tashman (@alexandra_tash) <a href="https://twitter.com/alexandra_tash/status/266062701745303552" data-datetime="2012-11-07T06:21:05+00:00">November 7, 2012</a></blockquote>
+					<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					
+					<!-- <a class="twitter-timeline"  href="https://twitter.com/dailybruin/daily-bruin-opinion" data-widget-id="253659787735207936">Tweets from @dailybruin/daily-bruin-opinion</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+
+					<div id="reactionGallery">
+						<h3>Reactions to election results</h3>
+						<p><a href="http://www.dailybruin.com/gallery/westwood-community-reacts-to-2012-election-results"><img id="mojologo" src="/static/mojoLogo.jpg" /> Read a live blog of what people in Westwood had to say about election night as it unfolded.</a></p>
+						<a href="http://www.dailybruin.com/gallery/westwood-community-reacts-to-2012-election-results">
+							<div id="galleryWrap">
+								<img src="/static/photoGallery.jpg" />
+								<span class="caption">Photo gallery of reactions</span>
+							</div>
+						</a>
+					</div><!-- end div#reactionGallery -->
+				</div><!-- end div.span4 -->
+				
+			</div><!-- end div#electionResults -->
+			<div class="row">
+				<div class="span12" id="inner">
+					<div class="row">
+						<div class="span8 statsStories">
+							
+							<div class="well nopad"><a href="http://elections.dailybruin.com/allstats/"><h2>Elections Statistics</h2></a>
+								<p>The Daily Bruin collaborated with the UCLA Department of Statistics to gauge the political climate on campus during the 2012 election season.</p>
+								<p>An anonymous online survey was emailed to 8,000 undergraduates through the UCLA Registrar&rsquo;s Office, which students could fill out between Sept. 24 and Oct. 9. The survey received 718 responses &mdash; a 9 percent response rate. While low, the responses matched UCLA student demographics and are an accurate indicator of the campus. The margin of error for the survey overall is 4.1 percent.</p>
+								<p>Students in the UCLA statistics course 140SL, which is about statistical consulting, analyzed the responses to the survey.</p>
+								<p><a href="https://www.google.com/fusiontables/DataSource?docid=1IDhBGtghJrfxHmgHyy6BI9f6CwTZxt3oZTTf7fw">Browse the raw data online</a> or <a href="/static/surveyquestions.pdf">download the complete list of questions asked</a>.</p>
+
+							<a href="http://www.dailybruin.com/article/2012/11/survey-shows-students-lack-political-involvement-on-campus"><div class="stats">
+									<img src="/static/apathy160.jpg" alt="political involvement on campus"/><p class="promo_head">Survey shows students lack political involvement on campus</p>
+									<p class="byline">By Nicole Chiang</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div></a>
+							<a href="http://www.dailybruin.com/article/2012/11/survey-finds-ulatino-students-more-likely-to-support-obama"><div class="stats">
+									<img src="/static/latino160.jpg" alt="Latino students support Obama"/><p class="promo_head">Survey finds Latino students more likely to support Obama</p>
+									<p class="byline">By Kristen Taketa</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div></a>
+							<a href="http://www.dailybruin.com/article/2012/10/5090d7c127bfd"><div class="stats">
+									<img src="/static/gender160.jpg" alt="gender gap in Obama support"/><p class="promo_head">Poll finds gender gap in Obama support</p>
+									<p class="byline">By Kylie Reynolds</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div></a>
+				
+							<a href="http://www.dailybruin.com/article/2012/10/poll-finds-prop-30-awareness-low-among-ucla-students"><div class="stats">
+									<img src="/static/prop30x160.jpg" alt="low Prop. 30 awareness"/><p class="promo_head">Poll finds Prop. 30 awareness low among UCLA students</p>
+									<p class="byline">By Andra Lim &amp; Sonali Kohli</p>
+									<br style="width:100%;display:block;clear:both" />
+							</div></a>
+
+							<a href="http://elections.dailybruin.com/allstats/"><button class="btn btn-info white btn-electiondata">
+								Explore the full set of survey data and the Daily Bruin's analysis of Proposition 30, <br/> Gov. Jerry Brown's tax initiative
+							</button></a>
+						</div><!-- end div.well -->
+						</div> <!-- end of span8 -->
+
+						<div class="span4">
+
+							<!-- <div class="alert alert-error" id="checkback"> Check back here all day on Election Day, Nov. 6, to see <b>live exit poll results</b> from voters around UCLA and Westwood. 
+							</div> -->
+							<h3>Live exit poll results</h3>
+							<p>Daily Bruin reporters were at Westwood voting locations all day Tuesday collecting exit poll results. The charts below are updated live as we collect responses. <a href="/exitpolls">View more exit poll results &raquo;</a></p>
+							<h5>President</h5>
+							<div id="presVisualization" style="width:300px;height:300px;"></div>
+								
+							<h5>Prop 30</h5>
+							<div id="propVisualization" style="width:300px;height:300px;"></div>
+											
+							<h3>What was on the ballot?</h3>
+							<p>Learn more about the <a href="http://www.dailybruin.com/article/2012/11/elections-2012-democrats-vs-republicans">candidates</a> and <a href="http://www.dailybruin.com/article/2012/11/elections-2012">measures</a> on the Los Angeles County ballot.</p>
+							
+						</div> <!-- end of span4 column -->
+					</div> <!-- inside row -->
+					<hr />
+					<div class="row">
+						<div class="span4">
+							<h3>UCLA Phone bankers in 2012 Elections</h3>
+							<iframe width="300" height="200" src="http://www.youtube.com/embed/i0rfN80qkkQ" frameborder="0" allowfullscreen></iframe>
+						</div><!-- end div.span4 -->
+						<div class="span4">
+							<h3 style="padding-top:26px;">Lambda Chi Alpha polling place</h3>
+							<iframe width="300" height="200" src="http://www.youtube.com/embed/ruiYuXZ76YI" frameborder="0" allowfullscreen></iframe>
+						</div><!-- end div.span4 -->
+						<div class="span4">
+							<h3>Google Hangout: Professor Daniel Mitchell</h3>
+							<iframe width="300" height="200" src="http://www.youtube.com/embed/a25ecG3uFqw" frameborder="0" allowfullscreen></iframe>
+						</div><!-- end div.span4 -->
+						<!-- <div class="span4" style="margin-top:47px;">
+							<a href="http://mojo.dailybruin.com/"><img src="http://mojo.dailybruin.com/wp-content/themes/mojo/img/logo.png" style="display:block;margin-left:auto;margin-right:auto;text-align:center;"/></a>
+							<p style="text-align:center;">Read more live elections stories from around Westwood on the Daily Bruin's mobile journalism blog, <a href="http://mojo.dailybruin.com">Mojo</a>.</p>
+							<ul>
+								<li><a href="http://mojo.dailybruin.com/live-blog-ucla-community-reacts-to-election-2012-results/">Live Blog: UCLA Community Reacts to Election 2012 Results</a></li>
+							</ul>
+						</div>-->
+					</div><!-- end div.row -->
+					<hr />
+					<h1>More elections stories</h1>
+					<div class="row" id="storylisting">
+						<div class="span6">
+							<p class="section_head">News</p>
+							<ul>
+								{% for news_story in news_stories %}
+								<a href="{{ news_story.dblink }}"><li>{{ news_story.headline }}</li></a>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="span6">
+							<p class="section_head">Opinion</p>
+							<ul>
+								{% for opinion_story in opinion_stories %}
+								<li><a href="{{ opinion_story.dblink }}" style="font-style:italic">{{ opinion_story.headline }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div><!-- end of second row-->
+
+				</div> <!-- this is the end of span12 inner, all of the body content -->
+			</div> 
+		</div> <!-- this is the end of div container -->
+
+{% endblock %}

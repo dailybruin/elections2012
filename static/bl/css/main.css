@@ -1,0 +1,393 @@
+/* Font: Bebas Neue */
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('font/BebasNeue-webfont.eot');
+    src: url('font/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/BebasNeue-webfont.woff') format('woff'),
+         url('font/BebasNeue-webfont.ttf') format('truetype'),
+         url('font/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+p {
+	font-family:"Georgia","Serif";
+	margin-bottom:15px;
+}
+h1, h2 {
+	font-family:"BebasNeueRegular";
+	color:#414141;
+	font-size:35px;
+}
+h3 {
+	font-family:"BebasNeueRegular";
+	line-height:1.1em;
+}
+
+article {
+	margin-bottom: 29px;
+	display: block;
+	clear:both;
+}
+#prop30img {
+    display: block;
+    float: left;
+    margin-right: 17px;
+}
+#prop30img:hover {
+	border-color:#08C;
+}
+
+p.prop30desc {
+	width:40%;
+	display:block;
+	float:left;
+	margin-top:5px;
+	position: relative;
+	top: 52px;
+}
+
+.alert {
+	font-family:"Georgia";
+	text-align:center;
+}
+
+#banner-container {
+	background-image:url('../img/electionsBanner.jpg');
+	height:150px;
+	position:relative;
+}
+#banner-container p {
+	color:white;
+	font-size:1em;
+	font-style:italic;
+	display:block;
+	position:absolute;
+	bottom:2px;
+	right:10px;
+}
+
+#banner-back {
+	background-color:#eaeaea;
+	border-bottom:1px solid #b6b6b6;
+	box-shadow:0 0 6px rgba(0,0,0,0.2);
+	margin-bottom: 20px;
+}
+footer {
+	background-color:#eaeaea;
+	border-top:1px solid #b6b6b6;
+	box-shadow:0 0 6px rgba(0,0,0,0.2);
+	height:150px;
+	display:block;
+	margin-top:20px;
+	text-align:center;
+}
+
+#chartcontrol {
+	float: left;
+	width: 359px;
+	display: block;
+}
+#chart_div {
+	display:block;
+	float:left;
+	width: 581px;
+	height:300px;
+}
+
+footer .coloredlink {
+	color:#08C;
+}
+footer a {
+	color:#414141;
+}
+footer #footer-nav {
+	font-size:15px;
+	margin-top: 46px;
+}
+footer #footer-copy {
+	font-size:10px;
+	font-style:italic;
+}
+
+#chartcontrol ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family:"Georgia","Serif";
+    margin-top:20px;
+    display:block;
+}
+#chartcontrol ul li a {
+	display:block;
+	color:black;
+	padding:5px 0;
+	margin:5px 0;
+	padding-left:10px;
+}
+#chartcontrol ul li a.selected {
+	color: white;
+	font-weight: bold;
+	background-color: #004;
+}
+#chartcontrol ul li a.selected:hover {
+	text-decoration:none;
+}
+
+/* ==========================================================================
+   Results styles
+   ========================================================================== */
+
+.resultsTitle {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    background-color: #333;
+    color: white;
+    margin-top: 0;
+}
+
+.results h3 {
+	font-family: "Georgia";
+	font-weight: 400;
+	font-style: italic;
+	text-align: center;
+	margin-top: 0;
+}
+
+.results img {
+	float:left;
+	margin-right:10px;
+	border:1px solid #AAA;
+	box-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+#presidentResult img {
+	width:120px;
+}
+
+.candidateTitle {
+	display: block;
+	font-family: "BebasNeueRegular";
+	font-size: 26px;
+	line-height: 32px;
+}
+.candidateName {
+    display: block;
+    font-family: "Georgia";
+    font-size: 16px;
+    font-weight: bold;
+}
+.candidateParty {
+	display: block;
+	font-family: "Georgia";
+	font-size: 16px;
+}
+.democrat {
+	color: #012b7f;
+}
+.republican {
+	color:#7f0101;
+}
+.thirdParty {
+	color:#cbae29;
+}
+
+.propBubble {
+	font-family: "BebasNeueRegular";
+	font-size: 33px;
+	display: block;
+	border: 3px solid #AAA;
+	padding: 15px;
+	border-radius: 38px;
+	width: 10px;
+	height: 10px;
+	line-height: 15px;
+	color: #AAA;
+	float: left;
+}
+.propName {
+	font-family: "Georgia";
+	margin-left: 12px;
+	font-size: 17px;
+	display: block;
+	float: left;
+	width:64%;
+}
+.propNum {
+    position: relative;
+    left: -7px;
+}
+.propLetter {
+	position: relative;
+	left: -2px;
+}
+
+.results ul {
+	clear:both;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.results ul li {
+	clear:both;
+	margin-bottom:10px;
+}
+#propResults ul li {
+	width:50%;
+	float:left;
+	clear:none;
+}
+#propThirtyResult .propBubble {
+	font-size: 70px;
+	width: 56px;
+	height: 56px;
+	line-height: 60px;
+	border-radius: 56px;
+}
+#propThirtyResult .propResult {
+	padding-top: 16px;
+}
+.propResult {
+	font-family: "BebasNeueRegular";
+	font-size: 22px;
+	float: left;
+	padding-left: 13px;
+    display: block;
+    padding-top: 16px;
+}
+.propYes {
+	border-color:#0a750e;
+	color:#0a750e;
+}
+.propNo {
+	border-color:#750a0a;
+	color:#750a0a;
+}
+.fb_twitter {
+	margin-bottom:10px;
+}
+#reactionGallery h3 {
+	padding:0;
+	margin:0;
+}
+#reactionGallery {
+	margin-top:16px;
+}
+#galleryWrap img {
+	border:1px solid black;
+	box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+#reactionGallery img:hover {
+	border-color:#08C;
+}
+#galleryWrap {
+	position:relative;
+}
+span.caption {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: white;
+    font-family: "Georgia";
+    font-size: 17px;
+	-webkit-transition: all 0.1s ease-in;
+}
+#galleryWrap:hover span.caption {
+	background-color: rgba(0,0,0,0.8);
+	padding-bottom:20px;
+	-webkit-transition: all 0.1s ease-in;
+}
+#mojologo {
+    border: none;
+    box-shadow: none;
+    width: 63px;
+    float: right;
+	margin-left:5px;
+	position: relative;
+	top: 11px;
+}
+.promo_head {
+	font-size: 18px;
+	line-height: 22px;
+	padding-top: 13px;
+	margin-bottom:4px;
+    color: #333;
+}
+.byline {
+    color: #aaa;
+}
+div.statsStories a:hover {
+	text-decoration:none;
+}
+div.statsStories a:hover .promo_head {
+	text-decoration:underline;
+}
+div.statsStories a img {
+	border: 1px solid white;
+}
+div.statsStories a:hover img {
+	border-color:#AAA;
+}
+.btn-electiondata {
+    margin-bottom: 21px;
+    margin-top: 11px;
+	width:100%;
+}
+.section_head {
+    font-family: "Georgia"; 
+	font-weight: 400; 
+	font-style: italic; 
+	text-align: center; 
+	margin-top: 0;
+	font-size:190%;
+	line-height:100%;
+	margin-bottom:15px;
+}
+#storylisting ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#storylisting ul a {
+	
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dedede;
+    padding-left: 10px;
+    padding-right: 10px;
+	padding-top:8px;
+    margin-bottom: 4px;
+	color:#444;
+	font-family:"Georgia";
+
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f4f4f4 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f4f4f4)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f4f4f4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+
+}
+#storylisting ul a:hover {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #efefef 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#efefef 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+}

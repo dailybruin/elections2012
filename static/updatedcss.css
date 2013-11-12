@@ -1,0 +1,221 @@
+/* Font: Bebas Neue */
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('font/BebasNeue-webfont.eot');
+    src: url('font/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/BebasNeue-webfont.woff') format('woff'),
+         url('font/BebasNeue-webfont.ttf') format('truetype'),
+         url('font/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Styles */
+
+p {
+	font-family:"Georgia", Helvetica, Arial, serif;
+	margin-bottom:15px;
+}
+h1{
+	font-family:"BebasNeueRegular", Helvetica, Arial, sans-serif;
+	color:#414141;
+	font-size:35px;
+}
+
+h2{
+	font-family:"BebasNeueRegular", Helvetica, Arial, sans-serif;
+	color:#414141;
+	font-size:30px;
+}
+
+#banner-container {
+	background-image:url('electionsBanner.jpg');
+	height:150px;
+	position:relative;
+}
+
+#banner-container p {
+	color:white;
+	font-size:1em;
+	font-style:italic;
+	display:block;
+	position:absolute;
+	bottom:2px;
+	right:10px;
+}
+
+#banner-back {
+	background-color:#eaeaea;
+	border-bottom:1px solid #b6b6b6;
+	box-shadow:0 0 6px rgba(0,0,0,0.2);
+	margin-bottom: 20px;
+}
+
+footer {
+	background-color:#eaeaea;
+	border-top:1px solid #b6b6b6;
+	box-shadow:0 0 6px rgba(0,0,0,0.2);
+	height:150px;
+	display:block;
+	margin-top:20px;
+	text-align:center;
+}
+
+footer .coloredlink {
+	color:#08C;
+}
+
+footer a {
+	color:#414141;
+}
+
+footer #footer-nav {
+	font-size:15px;
+	margin-top: 46px;
+}
+
+footer #footer-copy {
+	font-size:10px;
+	font-style:italic;
+}
+
+#inner{
+	background-color:white;
+}
+
+.explainer{
+	font-size:20px;
+	margin-bottom:10px;
+	line-height:25px;
+	padding-right:10px;
+}
+
+.nopad{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+#checkback{
+	height:250px;
+	line-height:30px;
+	font-size:29px;
+}
+
+.info_buttons{
+	margin-bottom:15px;
+}
+
+.white a{
+	color:#fff;
+}
+
+.stats
+{
+	padding-right:10px;
+	padding-bottom:5px;
+}
+
+.stats img{
+	margin-right:10px;
+	margin-bottom:1px;
+	float:left;
+	display:block;
+	position:relative;
+}
+
+/*.stats:hover{
+	opacity:0.8;
+}
+*/
+/*.promo_head{
+	font-size:20px;
+	line-height:27px;
+}
+*/
+.props{
+	padding-top:30px;
+	font-size:25px;
+	line-height:25px;
+	display:block;
+	padding-bottom:20px;
+}
+
+.props img{
+	float:left;
+	margin-right:24	px;
+}
+
+.endorse{
+	font-size:25px;
+	line-height:25px;
+	display:block;
+	padding-bottom:10px;
+}
+
+.endorse img{
+	float:left;
+	margin-right:10px;
+	border: 2px solid gray;
+}
+
+.ghangout{
+	padding-top:91px;
+	font-size:25px;
+	line-height:25px;
+	display:block;
+	padding-bottom:10px;
+}
+
+.ghangout p{
+	padding-top:10px;
+	font-size:18px;
+	line-height:20px;
+}
+
+
+/*.byline{
+	text-transform: uppercase;
+	color:#000;
+	font-size:12px;
+}
+*/
+hr{
+	height:0.1em;
+	color:#999;
+	background-color:#999;
+	margin:30px;
+}
+
+/*.section_head{
+	text-align:left;
+	font-size:190%;
+	line-height:100%;
+	font-weight:bold;
+	margin-bottom:15px;
+}
+*/
+.story img{
+	padding-right:10px;
+	padding-bottom:1px;
+	float:left;
+	display:block;
+	position:relative;
+}
+
+.story a{
+	color:black;
+}
+
+.story a:hover{
+	color:#08C;
+}
+
+.story:hover{
+	opacity:0.8;
+}
+.fb_twitter > iframe {
+	position: relative;
+	top: -14px;
+}

@@ -1,0 +1,33 @@
+{% extends "elections12/base.html" %}
+{% block title %}Westwood Exit Polls{% endblock %}
+{% block scripts %}
+		<!-- load charts -->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="/static/exitpolls.js"></script>
+{% endblock %}
+{% block middleBody %}
+	<article>
+		<h2>Westwood exit poll results</h2>
+		<p>Daily Bruin reporters were at Westwood voting locations all day Tuesday collecting exit poll results. The charts below were updated live as we collected responses, from 7 a.m. to 8 p.m.</p>
+	</article>
+	<div class="row">
+		<div class="span6">
+			<h3>President</h3>
+			<div id="presidentViz" style="width:460px;height=460px;"></div>
+		</div><!-- end div.span6 -->
+		<div class="span6">
+			<h3>Proposition 30 &mdash; Jerry Brown's Tax Measure</h3>
+			<div id="prop30Viz" style="width:460px;height=460px;"></div>
+		</div><!-- end div.span6 -->
+	</div><!-- end div.row -->
+	<div class="row">
+		<div class="span6">
+			<h3>Proposition 37 &mdash; Labeling of Genetically Engineered Foods</h3>
+			<div id="prop37Viz" style="width:460px;height=460px;"></div>
+		</div><!-- end div.span6 -->
+		<div class="span6">
+			<h3>Proposition 38 &mdash; Molly Munger's Tax Measure</h3>
+			<div id="prop38Viz" style="width:460px;height=460px;"></div>
+		</div><!-- end div.span6 -->
+	</div><!-- end div.row -->
+{% endblock %}

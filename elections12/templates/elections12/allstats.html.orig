@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Elections 2012 Statistics | Daily Bruin</title>
+        <meta name="description" content="">
+<!--         <meta name="viewport" content="width=device-width"> -->
+
+        <link rel="stylesheet" href="/static/bl/css/bootstrap.min.css">
+<!--         <link rel="stylesheet" href="css/bootstrap-responsive.min.css"> -->
+        <link rel="stylesheet" href="/static/bl/css/main.css">
+
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+        <script src="/static/bl/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        <script src="/static/bl/js/charts.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+	<div id="banner-back">
+		<a href="/"><div class="container" id="banner-container">
+			<p>from the UCLA Daily Bruin</p>
+		</div></a>
+	</div><!-- end div#banner-back -->
+
+	<div class="container" id="middle-container">
+		<div class="alert alert-info">
+			Check back here all day on election day, Nov. 6, to see <strong>live exit poll results</strong> from Westwood voters.
+		</div><!-- end div.alert-info -->	
+		<article>
+			<h2>Elections Statistics</h2>
+			<p>The Daily Bruin collaborated with the UCLA Department of Statistics to gauge the political climate on campus during the 2012 election season.</p>
+			<p>An anonymous online survey was emailed to 8,000 undergraduates through the UCLA Registrar&rsquo;s Office, which students could fill out between Sept. 24 and Oct. 9. The survey received 718 responses &mdash; a 9 percent response rate. While low, the responses matched UCLA student demographics and are an accurate indicator of the campus. The margin of error for the survey overall is 4.1 percent.</p>
+			<p>Students in the UCLA statistics course 140SL, which is about statistical consulting, analyzed the responses to the survey.</p>
+			<p><a href="https://www.google.com/fusiontables/DataSource?docid=1IDhBGtghJrfxHmgHyy6BI9f6CwTZxt3oZTTf7fw">Browse the raw data online</a> or <a href="/static/surveyquestions.pdf">download the complete list of questions asked</a>.</p>
+		</article>
+		
+		<article>
+			<h2>Prop 30</h2>
+			<a href="/stats"><img src="/static/bl/img/prop30.jpg" class="img-polaroid" id="prop30img" /></a>
+			<p class="prop30desc">California Proposition 30 has a direct impact on California&rsquo;s school systems. Learn about the proposition and how UCLA students feel in <a href="/stats">What&rsquo;s the Deal with Proposition 30</a>.</p>
+			<br style="width:100%;clear:both;display:block" />
+		</article>
+		
+		<article>
+			<h2>Financial Aid</h2>
+			<p>How are students on financial aid voting differently from those not on financial aid? We take a look at what percent of students with financial aid support certain candidates and policies, versus what percent of students with no financial aid support them. Explore the charts below.</p>
+			<div id="chartcontrol">
+				<ul>
+					<li><a class="chart1 selected" href="#" >Who will you vote for in 2012?</a></li>
+					<li><a class="chart2" href="#">Do you support Obama's policies?</a></li>
+					<li><a class="chart3" href="#">What issues are important to you in the upcoming election?</a></li>
+					<li><a class="chart4" href="#">What will you vote on Prop 30? What will you vote?</a></li>
+					<li><a class="chart5" href="#">Of those familiar with Prop 30, what will you vote on it?</a></li>
+				</ul>
+			</div>
+			<div id="chart_div">
+			
+			</div>
+		</article>
+		
+		<article>
+			<h2>Comments</h2>
+			        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'thedailybruin';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+		</article>
+	</div><!-- end div#middle-container -->
+
+
+	<footer>
+		<p id="footer-nav"><a class="coloredlink" href="http://elections.dailybruin.com/">Elections 2012</a>  |  <a href="http://dailybruin.com/">Home</a>  |  <a href="http://dailybruin.com/news">News</a>  |  <a href="http://dailybruin.com/sports">Sports</a>  |  <a href="http://dailybruin.com/ae">A&amp;E</a>  |  <a href="http://dailybruin.com/opinion">Opinion</a></p>
+		<p id="footer-copy">Page by Byron Lutz, Bruin senior staff. Content &copy; 2012 the Daily Bruin</p>
+	</footer>
+
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/static/bl/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="/static/bl/js/vendor/bootstrap.min.js"></script>
+
+        <script src="/static/bl/js/plugins.js"></script>
+        <script src="/static/bl/js/main.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-28181852-10'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

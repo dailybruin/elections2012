@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Elections 2012</title>
+
+		<link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    	<link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+		<style type="text/css">
+			#wrapper{
+				margin:50px;
+				margin-left:30px;
+				background-color:white;
+			}
+
+			#banner{
+				margin-bottom:40px;
+			}
+
+			.dates{
+				background-color:white;
+			}
+
+			.dates a{
+				color:#ffffff;
+			}
+
+			.altcolor a{
+				color:#000000;
+			}
+
+			.info_buttons{
+				margin-bottom:15px;
+			}
+
+			.center_head{
+				text-align:center;
+				font-size:190%;
+				line-height:100%;
+				font-weight:bold;
+				margin-bottom:30px;
+			}
+
+			.section_head{
+				text-align:left;
+				font-size:190%;
+				line-height:100%;
+				font-weight:bold;
+				margin-bottom:15px;
+			}
+
+			.big_head{
+				text-align:center;
+				font-size:170%;
+				font-style:oblique;
+				margin-bottom:20px;
+				line-height:90%;
+			}
+
+			.feature{
+				background-color:white;
+				padding-left:10px;
+				padding-right:10px;
+				margin-left:10px;
+
+			}
+
+			.sidebar{
+				background-color:white;
+				margin-left:10px;
+			}
+
+			hr{
+				height:0.1em;
+				color:#999;
+				background-color:#999;
+			}
+
+			.DBnews{
+				background-color:white;
+				height:580px;
+				float:left;
+
+			}
+
+			.DBopinion{
+				background-color:white;
+				height:580px;
+
+				float:left;
+
+			}
+
+			.ital{
+				font-style:oblique;
+			}
+
+			.DBmultimedia{
+				height:580px;
+				float:left;
+
+			}
+
+			.story img{
+				padding-right:10px;
+				padding-bottom:1px;
+				float:left;
+				display:block;
+				position:relative;
+			}
+
+			.story a{
+				color:black;
+			}
+
+			.story a:hover{
+				color:#08C;
+			}
+
+			.story:hover, .clickhover:hover{
+				opacity:0.8;
+			}
+
+			.promo_head{
+				font-size:130%;
+			}
+			
+			.read_more{
+				text-align:right;
+
+			}
+
+			/* Landscape phone to portrait tablet */
+			@media (max-width: 767px) 
+			{  
+				.DBnews{
+					background-color:white;
+					height:670px;
+					float:left;
+					padding-right:7px;
+				}
+
+				.DBopinion{
+					height:690px;
+					margin:0px;
+					padding:0px;
+					margin-top:10px;
+					float:left;
+					border: 0px;
+					border-top: 1px solid gray;
+					padding-top:10px;
+				}
+
+				.DBmultimedia{
+					background-color:white;
+					height:700px;
+					float:left;
+					margin:0px;
+					padding:0px;
+					border-left: 0px;
+					border-top: 1px solid gray;
+					padding-top:10px;
+					padding-bottom:20px;
+				}
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+		<div class="row" id="wrapper">
+			<div class="span12">
+				<div class="span12" id="banner">
+					<img src="/static/electionsbanner1500.jpg" alt="Elections 2012 banner"/>
+				</div>
+
+				<div class="row">
+				<!-- Important dates and links for voters -->
+					<div class="span3 dates">
+						<p class="center_head">Remember: Election Day is Tuesday, Nov. 6.</p>
+						<button class="btn btn-large btn-primary info_buttons"><a href="http://www.canivote.org/" target="_blank" rel="nofollow">Are you registered to vote? Check here.</a></button>
+						<button class="btn btn-large btn-danger info_buttons"><a href="http://www.lavote.net/LOCATOR/Default.cfm" target="_blank" rel="nofollow">Where do I go on Election Day? Find my closest polling place.</a></button>
+						<button class="btn btn-large altcolor info_buttons"><a href="http://www.sos.ca.gov/elections/elections_m.htm" target="_blank" rel="nofollow">I'm voting by mail. What do I need to do?</a></button>
+						<button class="btn btn-large btn-inverse info_buttons"><a href="http://voterguide.sos.ca.gov/" target="_blank" rel="nofollow">What's on the ballot? Browse the Official Voter Information Guide.</a></button>
+					</div>
+
+					<!-- Feature spot to highlight whatever is the biggest, most recent Elections piece -->
+					<div class="span6 feature clickhover">
+						<a href="{{ featured_story.dblink }}"><img src="/media/{{ featured_story.large_image }}" alt="spotlight story image"/>
+						<h1>{{ featured_story.headline }}</h1></a>
+						<p>{{ featured_story.teaser }}</p>
+					</div>
+
+					<!-- Sidebar with links to static candidate and proposition info, as well an image refer to the statistics project -->
+					<div class="span3 sidebar">
+						<p class="big_head">What is at stake?</p>
+						<button class="btn btn-large info_buttons"><a href="http://www.dailybruin.com/article/2012/11/elections-2012-democrats-vs-republicans">Meet the local, state and national candidates</a></button>
+						<button class="btn btn-large info_buttons"><a href="http://www.dailybruin.com/article/2012/11/elections-2012">Read about the propositions on California's ballot</a></button>
+						<div class="clickhover">
+							<p class="big_head">How are UCLA students voting?</p>
+							<a href="/allstats"><img src="/static/graphs.jpg" alt="image or icon for UCLA statistics project"/></a>
+						</div>
+					</div>
+				</div>
+
+					<hr/>
+					<div class="row">
+						<div class="span4 DBnews">
+							<p class="section_head">NEWS</p>
+							{% for news_story in news_stories %}
+							<div class="story">
+								<a href="{{ news_story.dblink }}">{% if news_story.small_image %}<img src="/media/{{ news_story.small_image }}" alt="story photo"/>{% endif %}<p class="promo_head">{{ news_story.headline }}</p></a>
+							<br style="width:100%;display:block;clear:both" />
+							</div>
+							{% endfor %}
+							<!-- <p class="read_more"><a href="#">Read more...</a></p> -->
+						</div>
+
+						<div class="span4 DBopinion">
+							<p class="section_head">OPINION</p>
+							{% for opinion_story in opinion_stories %}
+							<div class="story">
+								<a href="{{ opinion_story.dblink }}">{% if opinion_story.small_image %}<img src="/media/{{ opinion_story.small_image }}" alt="story photo"/>{% endif %}<p class="promo_head ital">{{ opinion_story.headline }}</p></a>
+							<br style="width:100%;display:block;clear:both">
+							</div>
+							{% endfor %}
+							<!-- <p class="read_more"><a href="#">Read more...</a></p> -->
+						</div>
+
+						<div class="span4 DBmultimedia">
+							<p class="section_head">MULTIMEDIA</p>
+							{% for multimedia_story in multimedia_stories %}
+							<div class="story">
+								<a href="{{ multimedia_story.dblink }}">{% if multimedia_story.small_image %}<img src="/media/{{ multimedia_story.small_image }}" alt="story photo"/>{% endif %}<p class="promo_head">{{ multimedia_story.headline }}</p>
+							<br style="width:100%;display:block;clear:both">
+							</div>
+							{% endfor %}
+							<!-- <p class="read_more"><a href="#">Read more...</a></p> -->
+						</div>
+					</div>
+				
+			</div>		
+		</div>
+	</body>
+	<script>
+        var _gaq=[['_setAccount','UA-28181852-10'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    
+
+</html>
